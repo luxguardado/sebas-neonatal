@@ -296,24 +296,21 @@ JSON.stringify(pacientes)
 
 mostrarPacientes();
 
-try{
+const formData =
+new FormData();
+
+formData.append(
+"data",
+JSON.stringify(paciente)
+);
 
 await fetch(API_URL,{
 
 method:"POST",
 
-mode:"no-cors",
-
-headers:{
-"Content-Type":"application/json"
-},
-
-body:JSON.stringify(
-paciente
-)
+body:formData
 
 });
-
 alert(
 "Expediente guardado correctamente"
 );
