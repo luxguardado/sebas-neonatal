@@ -1,10 +1,29 @@
 const API_URL =
-"https://script.google.com/macros/s/AKfycbx3pcgO7BcMBz_SQfJ9MKGFSticK_0II5b5m82UVAxK-8_u9B5HFk5n44-bmxxJk2Or/exec";
+"https://script.google.com/macros/s/AKfycbzr36K3N8k9iGwi5EeV-v9UgUTj5Apw0KJ1PMJfCaljcEmVxDajK9Ky3n29B7cNJNUC/exec";
 
 let pacientes =
 JSON.parse(
 localStorage.getItem("pacientes")
 ) || [];
+
+generarExpediente();
+
+function generarExpediente(){
+
+const numero =
+pacientes.length + 1;
+
+const expediente =
+"RN-" +
+new Date().getFullYear() +
+"-" +
+numero.toString().padStart(4,"0");
+
+document.getElementById(
+"expediente"
+).value = expediente;
+
+}
 
 function calcularEdadVida(){
 
@@ -59,11 +78,12 @@ horasTotales +
 document.getElementById(
 "edadVida"
 ).value = texto;
+
 }
 
 function clasificarBilirrubina(valor){
 
-if(valor > 20){
+if(valor >= 20){
 
 return{
 estado:"Crítico",
@@ -73,7 +93,7 @@ alerta:"danger-alert"
 
 }
 
-if(valor > 15){
+if(valor >= 15){
 
 return{
 estado:"Patológico",
@@ -95,7 +115,10 @@ async function guardarPaciente(){
 
 const paciente = {
 
-id: Date.now(),
+expediente:
+document.getElementById(
+"expediente"
+).value,
 
 nombre:
 document.getElementById(
@@ -132,51 +155,141 @@ document.getElementById(
 "pc"
 ).value,
 
-apgar:
+eg:
 document.getElementById(
-"apgar"
+"eg"
 ).value,
 
-grupoRh:
+apgar1:
 document.getElementById(
-"grupo"
+"apgar1"
+).value,
+
+apgar5:
+document.getElementById(
+"apgar5"
+).value,
+
+madre:
+document.getElementById(
+"madre"
+).value,
+
+edadMadre:
+document.getElementById(
+"edadMadre"
+).value,
+
+gestas:
+document.getElementById(
+"gestas"
+).value,
+
+partos:
+document.getElementById(
+"partos"
+).value,
+
+cesareas:
+document.getElementById(
+"cesareas"
+).value,
+
+abortos:
+document.getElementById(
+"abortos"
+).value,
+
+vih:
+document.getElementById(
+"vih"
+).value,
+
+rprMaterno:
+document.getElementById(
+"rprMaterno"
+).value,
+
+tipoParto:
+document.getElementById(
+"tipoParto"
+).value,
+
+motivoCesarea:
+document.getElementById(
+"motivoCesarea"
+).value,
+
+anestesia:
+document.getElementById(
+"anestesia"
+).value,
+
+liquido:
+document.getElementById(
+"liquido"
+).value,
+
+circular:
+document.getElementById(
+"circular"
+).value,
+
+leucocitos:
+document.getElementById(
+"leucocitos"
+).value,
+
+neutrofilos:
+document.getElementById(
+"neutrofilos"
+).value,
+
+linfocitos:
+document.getElementById(
+"linfocitos"
+).value,
+
+monocitos:
+document.getElementById(
+"monocitos"
+).value,
+
+hemoglobina:
+document.getElementById(
+"hemoglobina"
+).value,
+
+hematocrito:
+document.getElementById(
+"hematocrito"
+).value,
+
+plaquetas:
+document.getElementById(
+"plaquetas"
+).value,
+
+biliTotal:
+Number(
+document.getElementById(
+"biliTotal"
+).value
+),
+
+biliDirecta:
+document.getElementById(
+"biliDirecta"
+).value,
+
+biliIndirecta:
+document.getElementById(
+"biliIndirecta"
 ).value,
 
 diagnostico:
 document.getElementById(
 "diagnostico"
-).value,
-
-estado:
-document.getElementById(
-"estado"
-).value,
-
-bilirrubina:
-Number(
-document.getElementById(
-"bilirrubina"
-).value
-),
-
-pcr:
-document.getElementById(
-"pcr"
-).value,
-
-hemograma:
-document.getElementById(
-"hemograma"
-).value,
-
-rpr:
-document.getElementById(
-"rpr"
-).value,
-
-glicemia:
-document.getElementById(
-"glicemia"
 ).value,
 
 evolucion:
@@ -219,18 +332,16 @@ paciente
 });
 
 alert(
-"Paciente guardado correctamente"
+"Expediente guardado correctamente"
 );
 
 }catch(error){
 
-alert(
-"Error conectando con Google Sheets"
-);
-
 console.log(error);
 
 }
+
+generarExpediente();
 
 }
 
@@ -246,11 +357,35 @@ lista.innerHTML = "";
 let patologicos = 0;
 let criticos = 0;
 
-pacientes.forEach((p)=>{
+const busqueda =
+document.getElementById(
+"buscarPaciente"
+).value.toLowerCase();
+
+pacientes
+.filter((p)=>{
+
+return(
+
+p.nombre
+.toLowerCase()
+.includes(busqueda)
+
+||
+
+p.expediente
+.toLowerCase()
+.includes(busqueda)
+
+);
+
+})
+
+.forEach((p)=>{
 
 const clasificacion =
 clasificarBilirrubina(
-p.bilirrubina
+p.biliTotal
 );
 
 if(
@@ -272,10 +407,16 @@ lista.innerHTML += `
 <div class="paciente
 ${clasificacion.clase}">
 
-<h3>${p.nombre}</h3>
+<h3>
+${p.expediente}
+</h3>
+
+<h2>
+${p.nombre}
+</h2>
 
 <p>
-<strong>Edad de vida:</strong>
+<strong>Edad vida:</strong>
 ${p.edadVida}
 </p>
 
@@ -285,44 +426,39 @@ ${p.diagnostico}
 </p>
 
 <p>
-<strong>Estado:</strong>
-${p.estado}
-</p>
-
-<p>
 <strong>Peso:</strong>
 ${p.peso} g
 </p>
 
 <p>
-<strong>Bilirrubina:</strong>
-${p.bilirrubina}
+<strong>EG:</strong>
+${p.eg} semanas
+</p>
+
+<p>
+<strong>Parto:</strong>
+${p.tipoParto}
+</p>
+
+<p>
+<strong>VIH Materno:</strong>
+${p.vih}
+</p>
+
+<p>
+<strong>RPR Materno:</strong>
+${p.rprMaterno}
+</p>
+
+<p>
+<strong>Bilirrubina Total:</strong>
+${p.biliTotal}
 </p>
 
 <div class="alerta
 ${clasificacion.alerta}">
 ${clasificacion.estado}
 </div>
-
-<p>
-<strong>PCR:</strong>
-${p.pcr}
-</p>
-
-<p>
-<strong>Hemograma:</strong>
-${p.hemograma}
-</p>
-
-<p>
-<strong>Evolución:</strong>
-${p.evolucion}
-</p>
-
-<p>
-<strong>Indicaciones:</strong>
-${p.indicaciones}
-</p>
 
 </div>
 
@@ -346,5 +482,14 @@ document.getElementById(
 criticos;
 
 }
+
+document
+.getElementById(
+"buscarPaciente"
+)
+.addEventListener(
+"keyup",
+mostrarPacientes
+);
 
 mostrarPacientes();
