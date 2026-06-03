@@ -10,7 +10,7 @@ name="viewport"
 content="width=device-width, initial-scale=1.0"
 >
 
-<title>Sebas Neonatal</title>
+<title>Sebas Neonatal Pro</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -18,45 +18,99 @@ content="width=device-width, initial-scale=1.0"
 
 <body>
 
-<header>
+<div class="container">
 
-<h1>Sebas Neonatal Gold</h1>
+<!-- SIDEBAR -->
 
-<p>
+<aside class="sidebar">
+
+<h2>🏥 SEBAS</h2>
+
+<ul>
+
+<li>Dashboard</li>
+
+<li>Nuevo Paciente</li>
+
+<li>Expedientes</li>
+
+<li>Laboratorios</li>
+
+<li>Estadísticas</li>
+
+<li>Configuración</li>
+
+</ul>
+
+</aside>
+
+<!-- MAIN -->
+
+<main class="main-content">
+
+<header class="topbar">
+
+<h1>
 Expediente Clínico Neonatal
-</p>
+</h1>
+
+<input
+type="text"
+id="buscarPaciente"
+placeholder="Buscar por nombre o expediente"
+>
 
 </header>
+
+<!-- DASHBOARD -->
 
 <section class="dashboard">
 
 <div class="card">
+
 <h2 id="totalPacientes">0</h2>
+
 <p>Total Pacientes</p>
+
 </div>
 
 <div class="card warning">
+
 <h2 id="casosPatologicos">0</h2>
+
 <p>Patológicos</p>
+
 </div>
 
 <div class="card danger">
+
 <h2 id="casosCriticos">0</h2>
+
 <p>Críticos</p>
+
 </div>
 
 </section>
 
-<section class="formulario">
+<!-- IDENTIFICACION -->
 
-<h2>Ingreso Neonatal</h2>
+<section class="modulo">
+
+<h2>📁 Identificación RN</h2>
 
 <div class="grid">
 
 <input
 type="text"
+id="expediente"
+placeholder="Número expediente"
+readonly
+>
+
+<input
+type="text"
 id="nombre"
-placeholder="Nombre completo"
+placeholder="Nombre RN"
 >
 
 <input
@@ -73,8 +127,10 @@ readonly
 >
 
 <select id="sexo">
+
 <option>Masculino</option>
 <option>Femenino</option>
+
 </select>
 
 <input
@@ -96,71 +152,215 @@ placeholder="Perímetro cefálico"
 >
 
 <input
-type="text"
-id="apgar"
-placeholder="APGAR"
+type="number"
+id="eg"
+placeholder="Edad gestacional"
 >
 
 <input
 type="text"
-id="grupo"
-placeholder="Grupo y RH"
+id="apgar1"
+placeholder="APGAR 1 min"
 >
 
 <input
 type="text"
-id="diagnostico"
-placeholder="Diagnóstico"
+id="apgar5"
+placeholder="APGAR 5 min"
 >
 
-<select id="estado">
+</div>
 
-<option>Hospitalizado</option>
-<option>Mejorado</option>
-<option>Alta</option>
-<option>Referido</option>
+</section>
+
+<!-- DATOS MATERNOS -->
+
+<section class="modulo">
+
+<h2>👩‍🍼 Datos Maternos</h2>
+
+<div class="grid">
+
+<input
+type="text"
+id="madre"
+placeholder="Nombre madre"
+>
+
+<input
+type="number"
+id="edadMadre"
+placeholder="Edad madre"
+>
+
+<input
+type="text"
+id="gestas"
+placeholder="Gestas"
+>
+
+<input
+type="text"
+id="partos"
+placeholder="Partos"
+>
+
+<input
+type="text"
+id="cesareas"
+placeholder="Cesáreas"
+>
+
+<input
+type="text"
+id="abortos"
+placeholder="Abortos"
+>
+
+<select id="vih">
+
+<option>VIH Negativo</option>
+<option>VIH Positivo</option>
+<option>Pendiente</option>
+
+</select>
+
+<select id="rprMaterno">
+
+<option>RPR No Reactivo</option>
+<option>RPR Reactivo</option>
 
 </select>
 
 </div>
 
-<h3>Laboratorios</h3>
+</section>
+
+<!-- PARTO -->
+
+<section class="modulo">
+
+<h2>👶 Datos del Parto</h2>
+
+<div class="grid">
+
+<select id="tipoParto">
+
+<option>Vaginal</option>
+<option>Cesárea</option>
+<option>Instrumentado</option>
+
+</select>
+
+<select id="motivoCesarea">
+
+<option>No aplica</option>
+<option>Sufrimiento fetal</option>
+<option>Cesárea previa</option>
+<option>DCP</option>
+<option>Presentación pélvica</option>
+
+</select>
+
+<select id="anestesia">
+
+<option>No aplica</option>
+<option>Raquídea</option>
+<option>Epidural</option>
+<option>General</option>
+
+</select>
+
+<select id="liquido">
+
+<option>Claro</option>
+<option>Meconial</option>
+<option>Hemático</option>
+<option>Fétido</option>
+
+</select>
+
+<select id="circular">
+
+<option>Sin circular</option>
+<option>Circular simple</option>
+<option>Circular doble</option>
+
+</select>
+
+</div>
+
+</section>
+
+<!-- LABORATORIOS -->
+
+<section class="modulo">
+
+<h2>🧪 Laboratorios</h2>
+
+<h3>Hemograma</h3>
+
+<div class="grid">
+
+<input type="number" id="leucocitos" placeholder="Leucocitos">
+<input type="number" id="neutrofilos" placeholder="Neutrófilos">
+<input type="number" id="linfocitos" placeholder="Linfocitos">
+<input type="number" id="monocitos" placeholder="Monocitos">
+<input type="number" id="hemoglobina" placeholder="Hemoglobina">
+<input type="number" id="hematocrito" placeholder="Hematocrito">
+<input type="number" id="plaquetas" placeholder="Plaquetas">
+
+</div>
+
+<h3>Bilirrubinas</h3>
 
 <div class="grid">
 
 <input
 type="number"
-id="bilirrubina"
-placeholder="Bilirrubina"
+id="biliTotal"
+placeholder="Bilirrubina Total"
 >
 
 <input
 type="number"
-id="pcr"
-placeholder="PCR"
->
-
-<input
-type="text"
-id="hemograma"
-placeholder="Hemograma"
->
-
-<input
-type="text"
-id="rpr"
-placeholder="RPR"
+id="biliDirecta"
+placeholder="Bilirrubina Directa"
 >
 
 <input
 type="number"
-id="glicemia"
-placeholder="Glicemia"
+id="biliIndirecta"
+placeholder="Bilirrubina Indirecta"
 >
 
 </div>
 
-<h3>Evolución Médica</h3>
+</section>
+
+<!-- DIAGNOSTICOS -->
+
+<section class="modulo">
+
+<h2>📋 Diagnósticos CIE-10</h2>
+
+<select id="diagnostico">
+
+<option>P59 - Ictericia Neonatal</option>
+<option>P36 - Sepsis Neonatal</option>
+<option>P07 - Prematuridad</option>
+<option>P22 - SDR</option>
+<option>Z38 - RN nacido vivo</option>
+
+</select>
+
+</section>
+
+<!-- EVOLUCION -->
+
+<section class="modulo">
+
+<h2>📝 Evolución Médica</h2>
 
 <textarea
 id="evolucion"
@@ -172,19 +372,23 @@ id="indicaciones"
 placeholder="Indicaciones"
 ></textarea>
 
-<button onclick="guardarPaciente()">
-Guardar Expediente
-</button>
-
 </section>
+
+<button onclick="guardarPaciente()">
+💾 Guardar Expediente
+</button>
 
 <section class="lista">
 
-<h2>Pacientes Registrados</h2>
+<h2>📂 Expedientes</h2>
 
 <div id="listaPacientes"></div>
 
 </section>
+
+</main>
+
+</div>
 
 <script src="app.js"></script>
 
