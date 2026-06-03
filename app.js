@@ -6,24 +6,7 @@ JSON.parse(
 localStorage.getItem("pacientes")
 ) || [];
 
-generarExpediente();
 
-function generarExpediente(){
-
-const numero =
-pacientes.length + 1;
-
-const expediente =
-"RN-" +
-new Date().getFullYear() +
-"-" +
-numero.toString().padStart(4,"0");
-
-document.getElementById(
-"expediente"
-).value = expediente;
-
-}
 
 function calcularEdadVida(){
 
