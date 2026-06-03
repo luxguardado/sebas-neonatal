@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+>
+
+<title>Sebas Neonatal</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Sebas Neonatal Gold</h1>
+
+<p>
+Expediente Clínico Neonatal
+</p>
+
+</header>
+
+<section class="dashboard">
+
+<div class="card">
+<h2 id="totalPacientes">0</h2>
+<p>Total Pacientes</p>
+</div>
+
+<div class="card warning">
+<h2 id="casosPatologicos">0</h2>
+<p>Patológicos</p>
+</div>
+
+<div class="card danger">
+<h2 id="casosCriticos">0</h2>
+<p>Críticos</p>
+</div>
+
+</section>
+
+<section class="formulario">
+
+<h2>Ingreso Neonatal</h2>
+
+<div class="grid">
+
+<input
+type="text"
+id="nombre"
+placeholder="Nombre completo"
+>
+
+<input
+type="datetime-local"
+id="fechaNacimiento"
+onchange="calcularEdadVida()"
+>
+
+<input
+type="text"
+id="edadVida"
+placeholder="Edad de vida"
+readonly
+>
+
+<select id="sexo">
+<option>Masculino</option>
+<option>Femenino</option>
+</select>
+
+<input
+type="number"
+id="peso"
+placeholder="Peso (g)"
+>
+
+<input
+type="number"
+id="talla"
+placeholder="Talla (cm)"
+>
+
+<input
+type="number"
+id="pc"
+placeholder="Perímetro cefálico"
+>
+
+<input
+type="text"
+id="apgar"
+placeholder="APGAR"
+>
+
+<input
+type="text"
+id="grupo"
+placeholder="Grupo y RH"
+>
+
+<input
+type="text"
+id="diagnostico"
+placeholder="Diagnóstico"
+>
+
+<select id="estado">
+
+<option>Hospitalizado</option>
+<option>Mejorado</option>
+<option>Alta</option>
+<option>Referido</option>
+
+</select>
+
+</div>
+
+<h3>Laboratorios</h3>
+
+<div class="grid">
+
+<input
+type="number"
+id="bilirrubina"
+placeholder="Bilirrubina"
+>
+
+<input
+type="number"
+id="pcr"
+placeholder="PCR"
+>
+
+<input
+type="text"
+id="hemograma"
+placeholder="Hemograma"
+>
+
+<input
+type="text"
+id="rpr"
+placeholder="RPR"
+>
+
+<input
+type="number"
+id="glicemia"
+placeholder="Glicemia"
+>
+
+</div>
+
+<h3>Evolución Médica</h3>
+
+<textarea
+id="evolucion"
+placeholder="Evolución médica"
+></textarea>
+
+<textarea
+id="indicaciones"
+placeholder="Indicaciones"
+></textarea>
+
+<button onclick="guardarPaciente()">
+Guardar Expediente
+</button>
+
+</section>
+
+<section class="lista">
+
+<h2>Pacientes Registrados</h2>
+
+<div id="listaPacientes"></div>
+
+</section>
+
+<script src="app.js"></script>
+
+</body>
+</html>
