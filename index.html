@@ -247,7 +247,7 @@ placeholder="Abortos"
 
 <option>Vaginal</option>
 <option>Cesárea</option>
-<option>Instrumentado</option>
+
 
 </select>
 
@@ -345,17 +345,15 @@ placeholder="Bilirrubina Indirecta"
 
 <h3>Diagnósticos de Ingreso</h3>
 
-<select
-id="diagnosticoIngreso"
-multiple
-size="12"
->
+<div class="grid">
 
-<option>P07.2 - Prematuridad extrema</option>
-<option>P07.3 - Prematuridad</option>
+<select id="dxIngreso1">
 
 <option>P59.0 - Ictericia neonatal</option>
 <option>P59.9 - Hiperbilirrubinemia neonatal</option>
+
+<option>P07.2 - Prematuridad extrema</option>
+<option>P07.3 - Prematuridad</option>
 
 <option>P36.0 - Sepsis neonatal</option>
 <option>P36.9 - Sepsis bacteriana neonatal</option>
@@ -385,55 +383,72 @@ size="12"
 
 <option>Z38.0 - RN único hospitalario</option>
 
-<option>Z38.1 - RN único extrahospitalario</option>
+</select>
+
+<select id="dxIngreso2">
+
+<option value="">Sin diagnóstico</option>
+
+<option>P59.0 - Ictericia neonatal</option>
+<option>P59.9 - Hiperbilirrubinemia neonatal</option>
+
+<option>P07.2 - Prematuridad extrema</option>
+<option>P07.3 - Prematuridad</option>
+
+<option>P36.0 - Sepsis neonatal</option>
+<option>P36.9 - Sepsis bacteriana neonatal</option>
+
+<option>P22.0 - SDR neonatal</option>
 
 </select>
+
+<select id="dxIngreso3">
+
+<option value="">Sin diagnóstico</option>
+
+<option>P59.0 - Ictericia neonatal</option>
+<option>P07.3 - Prematuridad</option>
+<option>P36.9 - Sepsis bacteriana neonatal</option>
+<option>P70.4 - Hipoglicemia neonatal</option>
+
+</select>
+
+</div>
 
 <h3>Diagnósticos de Egreso</h3>
 
-<select
-id="diagnosticoEgreso"
-multiple
-size="12"
->
+<div class="grid">
 
-<option>P07.2 - Prematuridad extrema</option>
-<option>P07.3 - Prematuridad</option>
+<select id="dxEgreso1">
 
 <option>P59.0 - Ictericia neonatal</option>
-<option>P59.9 - Hiperbilirrubinemia neonatal</option>
-
-<option>P36.0 - Sepsis neonatal</option>
-<option>P36.9 - Sepsis bacteriana neonatal</option>
-
-<option>P22.0 - SDR neonatal</option>
-<option>P22.1 - Taquipnea transitoria</option>
-
-<option>P24.0 - Aspiración meconial</option>
-
-<option>P21.0 - Asfixia severa</option>
-<option>P21.9 - Asfixia neonatal</option>
-
-<option>P70.4 - Hipoglicemia neonatal</option>
-
-<option>P55.0 - Incompatibilidad Rh</option>
-<option>P55.1 - Incompatibilidad ABO</option>
-
-<option>P90 - Convulsiones neonatales</option>
-
-<option>P28.4 - Apnea neonatal</option>
-
-<option>P77 - Enterocolitis neonatal</option>
-
-<option>P07.1 - Bajo peso al nacer</option>
-
-<option>P08.0 - RN macrosómico</option>
-
-<option>Z38.0 - RN único hospitalario</option>
-
-<option>Z38.1 - RN único extrahospitalario</option>
+<option>P07.3 - Prematuridad</option>
+<option>P36.9 - Sepsis neonatal</option>
+<option>Z38.0 - RN sano</option>
 
 </select>
+
+<select id="dxEgreso2">
+
+<option value="">Sin diagnóstico</option>
+
+<option>P59.0 - Ictericia neonatal</option>
+<option>P07.3 - Prematuridad</option>
+<option>P36.9 - Sepsis neonatal</option>
+
+</select>
+
+<select id="dxEgreso3">
+
+<option value="">Sin diagnóstico</option>
+
+<option>P59.0 - Ictericia neonatal</option>
+<option>P07.3 - Prematuridad</option>
+<option>P36.9 - Sepsis neonatal</option>
+
+</select>
+
+</div>
 </section>
 
 <!-- EVOLUCION -->
