@@ -577,11 +577,6 @@ ${p.edadVida}
 </p>
 
 <p>
-<strong>Diagnóstico:</strong>
-${p.diagnostico}
-</p>
-
-<p>
 <strong>Peso:</strong>
 ${p.peso} g
 </p>
