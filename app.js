@@ -649,3 +649,5 @@ mostrarPacientes
 );
 
 mostrarPacientes();
+function generarExpediente() {
+  }
