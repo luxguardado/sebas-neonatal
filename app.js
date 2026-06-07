@@ -582,6 +582,11 @@ ${p.peso} g
 </p>
 
 <p>
+<strong>DX Ingreso:</strong>
+${p.dxIngreso1}
+</p>
+
+<p>
 <strong>EG:</strong>
 ${p.eg} semanas
 </p>
