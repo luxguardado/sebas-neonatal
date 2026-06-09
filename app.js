@@ -347,7 +347,17 @@ localStorage.setItem(
 JSON.stringify(pacientes)
 );
 
-mostrarPacientes();
+
+  
+  window.onload = function(){
+
+  mostrarPacientes();
+
+};
+  
+  
+  
+
 
 const formData =
 new FormData();
