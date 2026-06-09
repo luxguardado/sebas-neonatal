@@ -387,9 +387,10 @@ document.getElementById(
 "listaPacientes"
 );
 
-
+if(!lista) return;
 
 lista.innerHTML = "";
+
 
 let patologicos = 0;
 let criticos = 0;
@@ -512,21 +513,35 @@ ${clasificacion.estado}
 
 });
 
+const total =
 document.getElementById(
 "totalPacientes"
-).innerText =
-pacientes.length;
+);
 
+if(total){
+total.innerText =
+pacientes.length;
+}
+
+const patologicosSpan =
 document.getElementById(
 "casosPatologicos"
-).innerText =
-patologicos;
+);
 
+if(pathologicosSpan){
+pathologicosSpan.innerText =
+patologicos;
+}
+
+const criticosSpan =
 document.getElementById(
 "casosCriticos"
-).innerText =
-criticos;
+);
 
+if(criticosSpan){
+criticosSpan.innerText =
+criticos;
+}
 }
 
 window.onload = function(){
