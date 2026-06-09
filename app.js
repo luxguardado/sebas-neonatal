@@ -523,15 +523,20 @@ total.innerText =
 pacientes.length;
 }
 
-const patologicosSpan =
+
+
+  const patologicosSpan =
 document.getElementById(
 "casosPatologicos"
 );
 
-if(pathologicosSpan){
-pathologicosSpan.innerText =
+if(patologicosSpan){
+patologicosSpan.innerText =
 patologicos;
 }
+
+
+
 
 const criticosSpan =
 document.getElementById(
