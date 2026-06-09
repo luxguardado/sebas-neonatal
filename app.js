@@ -347,21 +347,11 @@ localStorage.setItem(
 JSON.stringify(pacientes)
 );
 
-
-  
-  window.onload = function(){
-
-  mostrarPacientes();
-
-};
-  
-  
-  
-
+mostrarPacientes();
 
 const formData =
 new FormData();
-
+  
 formData.append(
 "data",
 JSON.stringify(paciente)
@@ -542,3 +532,11 @@ document.getElementById(
 criticos;
 
 }
+
+  
+  window.onload = function(){
+
+  mostrarPacientes();
+
+};
+  
