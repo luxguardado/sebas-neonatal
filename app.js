@@ -535,9 +535,6 @@ patologicosSpan.innerText =
 patologicos;
 }
 
-
-
-
 const criticosSpan =
 document.getElementById(
 "casosCriticos"
