@@ -380,18 +380,14 @@ generarExpediente();
 
 
 
-
-
-
-
-mostrarPacientes();
-
 function mostrarPacientes(){
 
 const lista =
 document.getElementById(
 "listaPacientes"
 );
+
+
 
 lista.innerHTML = "";
 
@@ -533,10 +529,23 @@ criticos;
 
 }
 
-  
-  window.onload = function(){
+window.onload = function(){
 
   mostrarPacientes();
+
+  const buscador =
+  document.getElementById(
+    "buscarPaciente"
+  );
+
+  if(buscador){
+
+    buscador.addEventListener(
+      "keyup",
+      mostrarPacientes
+    );
+
+  }
 
 };
   
