@@ -99,15 +99,17 @@ try {
 
 const paciente = {
 
-expediente:
+  EXPEDIENTE:
 document.getElementById(
 "expediente"
 ).value,
-
-nombre:
+  
+NOMBRE_RN:
 document.getElementById(
 "nombre"
 ).value,
+
+
 
 fechaNacimiento:
 document.getElementById(
@@ -164,15 +166,35 @@ document.getElementById(
 "edadMadre"
 ).value,
 
-  <input
-type="text"
-id="dniMadre"
-placeholder="DNI Madre"
->
-<textarea
-id="interpretacionClinica"
-placeholder="Interpretación clínica"
-></textarea>
+dniMadre:
+document.getElementById(
+"dniMadre"
+).value,
+
+grupoMadre:
+document.getElementById(
+"grupoMadre"
+).value,
+
+rhMadre:
+document.getElementById(
+"rhMadre"
+).value,
+
+grupoRn:
+document.getElementById(
+"grupoRn"
+).value,
+
+rhRn:
+document.getElementById(
+"rhRn"
+).value,
+
+interpretacionClinica:
+document.getElementById(
+"interpretacionClinica"
+).value,
 
 gestas:
 document.getElementById(
