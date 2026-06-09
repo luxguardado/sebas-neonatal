@@ -164,6 +164,16 @@ document.getElementById(
 "edadMadre"
 ).value,
 
+  <input
+type="text"
+id="dniMadre"
+placeholder="DNI Madre"
+>
+<textarea
+id="interpretacionClinica"
+placeholder="Interpretación clínica"
+></textarea>
+
 gestas:
 document.getElementById(
 "gestas"
@@ -194,6 +204,31 @@ document.getElementById(
 "rprMaterno"
 ).value,
 
+<select id="grupoMadre">
+<option>A</option>
+<option>B</option>
+<option>AB</option>
+<option>O</option>
+</select>
+
+<select id="rhMadre">
+<option>Positivo</option>
+<option>Negativo</option>
+</select>
+
+<select id="grupoRn">
+<option>A</option>
+<option>B</option>
+<option>AB</option>
+<option>O</option>
+</select>
+
+<select id="rhRn">
+<option>Positivo</option>
+<option>Negativo</option>
+</select>
+
+  
 tipoParto:
 document.getElementById(
 "tipoParto"
