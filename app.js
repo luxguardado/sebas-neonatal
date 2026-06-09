@@ -336,10 +336,12 @@ document.getElementById("observacionFototerapia").value,
 EVOLUCION:
 document.getElementById("evolucion").value,
 
-INDICACIONES:
-document.getElementById("indicaciones").value,
+
+  INDICACIONES:
+document.getElementById("indicaciones").value
 
 };
+
 
 pacientes.push(paciente);
 
