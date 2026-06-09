@@ -336,12 +336,10 @@ document.getElementById("observacionFototerapia").value,
 EVOLUCION:
 document.getElementById("evolucion").value,
 
-
 INDICACIONES:
 document.getElementById("indicaciones").value
 
 };
-
 pacientes.push(paciente);
 
 localStorage.setItem(
@@ -399,11 +397,16 @@ lista.innerHTML = "";
 
 let patologicos = 0;
 let criticos = 0;
-
-const busqueda =
+  
+const buscador =
 document.getElementById(
 "buscarPaciente"
-).value.toLowerCase();
+);
+
+const busqueda =
+buscador
+? buscador.value.toLowerCase()
+: "";
 
 pacientes
 .filter((p)=>{
