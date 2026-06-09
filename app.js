@@ -148,290 +148,174 @@ document.getElementById(
 "fechaNacimiento"
 ).value,
 
+GRUPO_MADRE:
+document.getElementById("grupoMadre").value,
 
+RH_MADRE:
+document.getElementById("rhMadre").value,
 
+GRUPO_RN:
+document.getElementById("grupoRn").value,
 
-grupoMadre:
-document.getElementById(
-"grupoMadre"
-).value,
+RH_RN:
+document.getElementById("rhRn").value,
 
-rhMadre:
-document.getElementById(
-"rhMadre"
-).value,
+INTERPRETACION_CLINICA:
+document.getElementById("interpretacionClinica").value,
+GESTAS:
+document.getElementById("gestas").value,
 
-grupoRn:
-document.getElementById(
-"grupoRn"
-).value,
+PARTOS:
+document.getElementById("partos").value,
 
-rhRn:
-document.getElementById(
-"rhRn"
-).value,
+CESAREAS:
+document.getElementById("cesareas").value,
 
-interpretacionClinica:
-document.getElementById(
-"interpretacionClinica"
-).value,
+ABORTOS:
+document.getElementById("abortos").value,
 
-gestas:
-document.getElementById(
-"gestas"
-).value,
+VIH:
+document.getElementById("vih").value,
 
-partos:
-document.getElementById(
-"partos"
-).value,
+RPR_MATERNO:
+document.getElementById("rprMaterno").value,
 
-cesareas:
-document.getElementById(
-"cesareas"
-).value,
+TIPO_PARTO:
+document.getElementById("tipoParto").value,
 
-abortos:
-document.getElementById(
-"abortos"
-).value,
+MOTIVO_CESAREA:
+document.getElementById("motivoCesarea").value,
 
-vih:
-document.getElementById(
-"vih"
-).value,
+ANESTESIA:
+document.getElementById("anestesia").value,
 
-rprMaterno:
-document.getElementById(
-"rprMaterno"
-).value,
+LIQUIDO_AMNIOTICO:
+document.getElementById("liquido").value,
 
-  
-tipoParto:
-document.getElementById(
-"tipoParto"
-).value,
+CIRCULAR_CORDON:
+document.getElementById("circular").value,
 
-motivoCesarea:
-document.getElementById(
-"motivoCesarea"
-).value,
+LEUCOCITOS:
+document.getElementById("leucocitos").value,
 
-anestesia:
-document.getElementById(
-"anestesia"
-).value,
+NEUTROFILOS:
+document.getElementById("neutrofilos").value,
 
-liquido:
-document.getElementById(
-"liquido"
-).value,
+LINFOCITOS:
+document.getElementById("linfocitos").value,
 
-circular:
-document.getElementById(
-"circular"
-).value,
+MONOCITOS:
+document.getElementById("monocitos").value,
 
-leucocitos:
-document.getElementById(
-"leucocitos"
-).value,
+HEMOGLOBINA:
+document.getElementById("hemoglobina").value,
 
-neutrofilos:
-document.getElementById(
-"neutrofilos"
-).value,
+HEMATOCRITO:
+document.getElementById("hematocrito").value,
 
-linfocitos:
-document.getElementById(
-"linfocitos"
-).value,
+PLAQUETAS:
+document.getElementById("plaquetas").value,
 
-monocitos:
-document.getElementById(
-"monocitos"
-).value,
+BILI_TOTAL:
+Number(document.getElementById("biliTotal").value),
 
-hemoglobina:
-document.getElementById(
-"hemoglobina"
-).value,
+BILI_DIRECTA:
+document.getElementById("biliDirecta").value,
 
-hematocrito:
-document.getElementById(
-"hematocrito"
-).value,
+BILI_INDIRECTA:
+document.getElementById("biliIndirecta").value,
 
-plaquetas:
-document.getElementById(
-"plaquetas"
-).value,
+PCR:
+document.getElementById("pcr").value,
 
-biliTotal:
-Number(
-document.getElementById(
-"biliTotal"
-).value
-),
+RPR_RN:
+document.getElementById("rprRn").value,
 
-biliDirecta:
-document.getElementById(
-"biliDirecta"
-).value,
+GLICEMIA:
+document.getElementById("glicemia").value,
 
-biliIndirecta:
-document.getElementById(
-"biliIndirecta"
-).value,
-pcr:
-document.getElementById(
-"pcr"
-).value,
+UREA:
+document.getElementById("urea").value,
 
-rprRn:
-document.getElementById(
-"rprRn"
-).value,
+CREATININA:
+document.getElementById("creatinina").value,
 
-glicemia:
-document.getElementById(
-"glicemia"
-).value,
+SODIO:
+document.getElementById("sodio").value,
 
-urea:
-document.getElementById(
-"urea"
-).value,
+POTASIO:
+document.getElementById("potasio").value,
 
-creatinina:
-document.getElementById(
-"creatinina"
-).value,
+CLORO:
+document.getElementById("cloro").value,
 
-sodio:
-document.getElementById(
-"sodio"
-).value,
+CALCIO:
+document.getElementById("calcio").value,
 
-potasio:
-document.getElementById(
-"potasio"
-).value,
+MAGNESIO:
+document.getElementById("magnesio").value,
 
-cloro:
-document.getElementById(
-"cloro"
-).value,
+TGO:
+document.getElementById("tgo").value,
 
-calcio:
-document.getElementById(
-"calcio"
-).value,
+TGP:
+document.getElementById("tgp").value,
 
-magnesio:
-document.getElementById(
-"magnesio"
-).value,
+FOSFATASA_ALCALINA:
+document.getElementById("fosfatasaAlcalina").value,
 
-tgo:
-document.getElementById(
-"tgo"
-).value,
+GGT:
+document.getElementById("ggt").value,
 
-tgp:
-document.getElementById(
-"tgp"
-).value,
+PROTEINAS_TOTALES:
+document.getElementById("proteinasTotales").value,
 
-fosfatasaAlcalina:
-document.getElementById(
-"fosfatasaAlcalina"
-).value,
+ALBUMINA:
+document.getElementById("albumina").value,
 
-ggt:
-document.getElementById(
-"ggt"
-).value,
+GLOBULINAS:
+document.getElementById("globulinas").value,
 
-proteinasTotales:
-document.getElementById(
-"proteinasTotales"
-).value,
+RELACION_AG:
+document.getElementById("relacionAG").value,
 
-albumina:
-document.getElementById(
-"albumina"
-).value,
+COOMBS_DIRECTO:
+document.getElementById("coombsDirecto").value,
 
-globulinas:
-document.getElementById(
-"globulinas"
-).value,
+COOMBS_INDIRECTO:
+document.getElementById("coombsIndirecto").value,
 
-relacionAG:
-document.getElementById(
-"relacionAG"
-).value,
-  
+TAMIZ_NEONATAL:
+document.getElementById("tamizNeonatal").value,
 
-  coombsDirecto:
-document.getElementById(
-"coombsDirecto"
-).value,
+POTENCIALES_AUDITIVOS:
+document.getElementById("potencialesAuditivos").value,
 
-coombsIndirecto:
-document.getElementById(
-"coombsIndirecto"
-).value,
+ECOCARDIOGRAMA:
+document.getElementById("ecocardiograma").value,
 
-tamizNeonatal:
-document.getElementById(
-"tamizNeonatal"
-).value,
+USG_TRANSFONTANELAR:
+document.getElementById("usgTransfontanelar").value,
 
-potencialesAuditivos:
-document.getElementById(
-"potencialesAuditivos"
-).value,
+DX_INGRESO_PRINCIPAL:
+document.getElementById("dxIngreso1").value,
 
-ecocardiograma:
-document.getElementById(
-"ecocardiograma"
-).value,
+DX_INGRESO_SECUNDARIO:
+document.getElementById("dxIngreso2").value,
 
-usgTransfontanelar:
-document.getElementById(
-"usgTransfontanelar"
-).value,
+DX_INGRESO_OTROS:
+document.getElementById("dxIngreso3").value,
 
-  dxIngreso1:
+DX_EGRESO_PRINCIPAL:
+document.getElementById("dxEgreso1").value,
+
+DX_EGRESO_SECUNDARIO:
+document.getElementById("dxEgreso2").value,
+
+DX_EGRESO_OTROS:
+document.getElementById("dxEgreso3").value,  dxIngreso1:
 document.getElementById(
 "dxIngreso1"
-).value,
-
-dxIngreso2:
-document.getElementById(
-"dxIngreso2"
-).value,
-
-dxIngreso3:
-document.getElementById(
-"dxIngreso3"
-).value,
-
-dxEgreso1:
-document.getElementById(
-"dxEgreso1"
-).value,
-
-dxEgreso2:
-document.getElementById(
-"dxEgreso2"
-).value,
-
-dxEgreso3:
-document.getElementById(
-"dxEgreso3"
 ).value,
 
 requerimientoHidrico:
@@ -514,6 +398,14 @@ generarExpediente();
 
 }
 
+
+
+
+
+
+
+mostrarPacientes();
+
 function mostrarPacientes(){
 
 const lista =
@@ -536,13 +428,17 @@ pacientes
 
 return(
 
-p.nombre
+String(
+p.NOMBRE_RN || ""
+)
 .toLowerCase()
 .includes(busqueda)
 
 ||
 
-p.expediente
+String(
+p.EXPEDIENTE || ""
+)
 .toLowerCase()
 .includes(busqueda)
 
@@ -554,7 +450,9 @@ p.expediente
 
 const clasificacion =
 clasificarBilirrubina(
-p.biliTotal
+Number(
+p.BILI_TOTAL || 0
+)
 );
 
 if(
@@ -573,59 +471,57 @@ criticos++;
 
 lista.innerHTML += `
 
-<div class="paciente
-${clasificacion.clase}">
+<div class="paciente ${clasificacion.clase}">
 
 <h3>
-${p.expediente}
+${p.EXPEDIENTE || ""}
 </h3>
 
 <h2>
-${p.nombre}
+${p.NOMBRE_RN || ""}
 </h2>
 
 <p>
 <strong>Edad vida:</strong>
-${p.edadVida}
+${p.EDAD_VIDA || ""}
 </p>
 
 <p>
 <strong>Peso:</strong>
-${p.peso} g
+${p.PESO || ""} g
 </p>
 
 <p>
 <strong>DX Ingreso:</strong>
-${p.dxIngreso1}
+${p.DX_INGRESO_PRINCIPAL || ""}
 </p>
 
 <p>
 <strong>EG:</strong>
-${p.eg} semanas
+${p.EG || ""} semanas
 </p>
 
 <p>
 <strong>Parto:</strong>
-${p.tipoParto}
+${p.TIPO_PARTO || ""}
 </p>
 
 <p>
 <strong>VIH Materno:</strong>
-${p.vih}
+${p.VIH || ""}
 </p>
 
 <p>
 <strong>RPR Materno:</strong>
-${p.rprMaterno}
+${p.RPR_MATERNO || ""}
 </p>
 
 <p>
 <strong>Bilirrubina Total:</strong>
-${p.biliTotal}
+${p.BILI_TOTAL || ""}
 </p>
 
-<div class="alerta
-${clasificacion.alerta}">
+<div class="alerta ${clasificacion.alerta}">
 ${clasificacion.estado}
 </div>
 
@@ -651,16 +547,3 @@ document.getElementById(
 criticos;
 
 }
-
-document
-.getElementById(
-"buscarPaciente"
-)
-.addEventListener(
-"keyup",
-mostrarPacientes
-);
-
-mostrarPacientes();
-function generarExpediente() {
-  }
