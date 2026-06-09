@@ -337,11 +337,10 @@ EVOLUCION:
 document.getElementById("evolucion").value,
 
 
-  INDICACIONES:
+INDICACIONES:
 document.getElementById("indicaciones").value
 
 };
-
 
 pacientes.push(paciente);
 
