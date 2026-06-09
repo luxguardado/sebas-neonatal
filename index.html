@@ -100,17 +100,20 @@ placeholder="Buscar por nombre o expediente"
 
 <div class="grid">
 
-<input
+  <input
 type="text"
 id="expediente"
 placeholder="Número expediente / DNI madre"
+required
 >
-
 <input
 type="text"
 id="nombre"
 placeholder="Nombre RN"
+required
 >
+
+
 
 <input
 type="datetime-local"
@@ -753,20 +756,22 @@ placeholder="Evolución médica"
 id="indicaciones"
 placeholder="Indicaciones"
 ></textarea>
-
-</section>
 <input
 type="text"
 id="usuarioRegistro"
 placeholder="Usuario que registra"
+required
 >
+</section>
+
 
 
 <select id="estado">
-
-<option value="Hospitalizado">
+  <option value="Hospitalizado" selected>
 Hospitalizado
 </option>
+
+
 
 <option value="Alta">
 Alta
