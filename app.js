@@ -109,8 +109,6 @@ document.getElementById(
 "nombre"
 ).value,
 
-
-
 fechaNacimiento:
 document.getElementById(
 "fechaNacimiento"
