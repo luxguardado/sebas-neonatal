@@ -108,6 +108,7 @@ NOMBRE_RN:
 document.getElementById(
 "nombre"
 ).value,
+  
 FECHA_NACIMIENTO:
 document.getElementById("fechaNacimiento").value,
 
@@ -143,10 +144,7 @@ document.getElementById("dniMadre").value,
 
 EDAD_MADRE:
 document.getElementById("edadMadre").value,
-fechaNacimiento:
-document.getElementById(
-"fechaNacimiento"
-).value,
+
 
 GRUPO_MADRE:
 document.getElementById("grupoMadre").value,
@@ -313,50 +311,33 @@ DX_EGRESO_SECUNDARIO:
 document.getElementById("dxEgreso2").value,
 
 DX_EGRESO_OTROS:
-document.getElementById("dxEgreso3").value,  dxIngreso1:
-document.getElementById(
-"dxIngreso1"
-).value,
+document.getElementById("dxEgreso3").value, 
 
-requerimientoHidrico:
-document.getElementById(
-"requerimientoHidrico"
-).value,
 
-volumenDiario:
-document.getElementById(
-"volumenDiario"
-).value,
 
-volumenPorToma:
-document.getElementById(
-"volumenPorToma"
-).value,
+REQUERIMIENTO_HIDRICO:
+document.getElementById("requerimientoHidrico").value,
 
-perdidasInsensibles:
-document.getElementById(
-"perdidasInsensibles"
-).value,
+VOLUMEN_DIARIO:
+document.getElementById("volumenDiario").value,
 
-fototerapia:
-document.getElementById(
-"fototerapia"
-).value,
+VOLUMEN_POR_TOMA:
+document.getElementById("volumenPorToma").value,
 
-observacionFototerapia:
-document.getElementById(
-"observacionFototerapia"
-).value,
-  
-evolucion:
-document.getElementById(
-"evolucion"
-).value,
+PERDIDAS_INSENSIBLES:
+document.getElementById("perdidasInsensibles").value,
 
-indicaciones:
-document.getElementById(
-"indicaciones"
-).value
+FOTOTERAPIA:
+document.getElementById("fototerapia").value,
+
+OBSERVACION_FOTOTERAPIA:
+document.getElementById("observacionFototerapia").value,
+
+EVOLUCION:
+document.getElementById("evolucion").value,
+
+INDICACIONES:
+document.getElementById("indicaciones").value,
 
 };
 
